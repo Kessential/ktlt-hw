@@ -45,7 +45,7 @@ void xoaDL(string dlCanXoa) {
       if (line == dlCanXoa) {
         found = true;
       } else {
-        ou << line << endl;
+        ou << line << "\n";
       }
     }
     in.close();
@@ -53,9 +53,9 @@ void xoaDL(string dlCanXoa) {
     remove("data.txt");
     rename("tmp.txt", "data.txt");
     if (found) {
-      cout << "Da xoa thanh cong!" << endl;
+      cout << "Da xoa thanh cong!\n";
     } else {
-      cout << "Khong tim thay du lieu can xoa." << endl;
+      cout << "Khong tim thay du lieu can xoa!\n";
     }
   }
 }
@@ -68,9 +68,9 @@ void updateDL(string dlCu, string dlMoi) {
     while (getline(fileIn, line)) {
       if (line == dlCu) {
         found = true;
-        fileOut << dlMoi << endl;
+        fileOut << dlMoi << "\n";
       } else {
-        fileOut << line << endl;
+        fileOut << line << "\n";
       }
     }
     fileIn.close();
@@ -78,9 +78,9 @@ void updateDL(string dlCu, string dlMoi) {
     remove("data.txt");
     rename("tmp.txt", "data.txt");
     if (found) {
-      cout << "Da cap nhat thanh cong!" << endl;
+      cout << "Da cap nhat thanh cong!\n";
     } else {
-      cout << "Khong tim thay du lieu can cap nhat." << endl;
+      cout << "Khong tim thay du lieu can cap nhat!\n";
     }
   }
 }
@@ -103,14 +103,14 @@ int main() {
       hienThi();
       break;
     case 2: {
-      cout << "Nhap du lieu ban can them\n";
+      cout << "Nhap du lieu ban can them:\n";
       string data;
       getline(cin, data);
       themDL(data);
       break;
     }
     case 3: {
-      cout << "Nhap du lieu ban can xoa\n";
+      cout << "Nhap du lieu ban can xoa:\n";
       string data;
       getline(cin, data);
       xoaDL(data);
@@ -118,15 +118,15 @@ int main() {
     }
     case 4: {
       string dlCu, dlMoi;
-      cout << "Nhap du lieu ban can tim\n";
+      cout << "Nhap du lieu ban can tim:\n";
       getline(cin, dlCu);
-      cout << "Nhap du lieu ban can cap nhat\n";
+      cout << "Nhap du lieu ban can cap nhat:\n";
       getline(cin, dlMoi);
       updateDL(dlCu, dlMoi);
       break;
     }
     default: {
-      cout << "Ban nhap lua chon sai, chuong trinh ket thuc\n";
+      cout << "Ban nhap lua chon sai, chuong trinh ket thuc!\n";
       return 1;
     }
     }
