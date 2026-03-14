@@ -1,6 +1,10 @@
 #include <cmath>
 #include <iostream>
 
+// Name: Pham Minh Khanh
+// Student ID: 202418924
+// Date: 12/3/2026
+
 using namespace std;
 
 void solve(double a, double b, double c) {
