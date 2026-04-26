@@ -40,8 +40,8 @@ void bubble_sort(vector<int> &v) {
 }
 
 int main() {
-  freopen("test.txt", "r", stdin);
-  freopen("output.txt", "w", stdout);
+  // freopen("test.txt", "r", stdin);
+  // freopen("output.txt", "w", stdout);
   ios::sync_with_stdio(false);
   cin.tie(nullptr);
   int n;
