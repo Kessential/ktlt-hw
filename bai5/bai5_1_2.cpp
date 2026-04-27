@@ -1,7 +1,5 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
-#include <cstdio>
 
 using namespace std;
 
@@ -41,5 +39,12 @@ void merge_sort(vector<int>& v, int l, int r) {
 }
 
 int main() {
-    
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int n; cin >> n;
+    vector<int> v(n);
+    for (int& x : v) cin >> x;
+    merge_sort(v, 0, v.size() - 1);
+    for (int x : v) cout << x << "\n";
+
 }
