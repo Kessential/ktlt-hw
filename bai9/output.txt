@@ -1,0 +1,5 @@
+=== KET QUA PHEP TOAN SO LON ===
+A          = 99999999999999999999
+Toan tu    = *
+B          = 2
+Ket qua    = 199999999999999999998

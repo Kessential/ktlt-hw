@@ -1,3 +1,7 @@
+// Name: Pham Minh Khanh
+// Student ID: 202418924
+// Class: 763966
+
 #include <iostream>
 #include <algorithm>
 #include <vector>

@@ -1,6 +1,10 @@
+// Name: Pham Minh Khanh
+// Student ID: 202418924
+// Class: 763966
 #include <cstddef>
 #include <iostream>
 #include <stdexcept>
+#include <string>
 
 using namespace std;
 
@@ -126,7 +130,7 @@ public:
         return result;
     }
 
-    friend ostream& operator << (ostream& os, Vector others) {
+    friend ostream& operator << (ostream& os, const Vector& others) {
         for (size_t i = 0; i < others.size; i++) {
             os << others.data[i] << " ";
         }
@@ -217,8 +221,54 @@ public:
         }
         return result;
     }
+
+    friend ostream& operator << (ostream& ou, const Matrix& others) {
+        for (int i = 0; i < others.rows; i++) {
+            for (int j = 0; j < others.cols; j++) {
+                ou << others(i, j) << " ";
+            }
+            ou << "\n";
+        }
+        return ou;
+    }
 };
 
 int main() {
-    // do later
+    Complex z1 {1, 2}, z2 {2, 3};
+    cout << "z1 + z2 = " << z1 + z2 << "\n";
+    cout << "z1 - z2 = " << z1 - z2 << "\n";
+    cout << "z1 * z2 = " << z1 * z2 << "\n";
+    cout << "z1 / z2 = " << z1 / z2 << "\n";
+
+    cout << string(40, '-') << "\n";
+
+    Vector v1(3), v2(3);
+    v1[0] = 1;
+    v1[1] = 2;
+    v1[2] = 3;
+
+    v2[0] = 9;
+    v2[1] = 8;
+    v2[2] = 7;
+
+    cout << "v1 + v2 = " << v1 + v2 << "\n";
+    cout << "v1 - v2 = " << v1 - v2 << "\n";
+    cout << "v1 * v2 = " << v1 * v2 << "\n";
+
+    cout << string(40, '-') << "\n";
+
+    Matrix m1(2, 2);
+    m1(0, 0) = 1;
+    m1(0, 1) = 2;
+    m1(1, 0) = 3;
+    m1(1, 1) = 4;
+
+    Matrix m2(2, 2);
+    m2(0, 0) = 9;
+    m2(0, 1) = 8;
+    m2(1, 0) = 7;
+    m2(1, 1) = 6;
+
+    cout << "m1 + m2 = \n" << m1 + m2 << "\n"; 
+    cout << "m1 * m2 = \n" << m1 * m2 << "\n"; 
 }
